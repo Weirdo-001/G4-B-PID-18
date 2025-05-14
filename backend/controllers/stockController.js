@@ -5,7 +5,7 @@ export const addStockController = async (req, res) => {
   try {
     const { amount, company, description, date, userId } = req.body;
 
-    if (!amount || !company || !userId) {
+    if (!amount || !company) {
       return res.status(400).json({
         success: false,
         message: "Please fill all required fields (amount, company, userId)",
